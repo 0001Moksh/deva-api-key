@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uj92gnng0(gb8b$uoly2lbte@2c4p6u(8h4383l=$x7#9!yzu)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['deva-api-key-2.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
