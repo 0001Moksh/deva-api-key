@@ -27,10 +27,10 @@ class MySecureView(APIView):
 def protected_view(request):
     return JsonResponse({"message": "This is a protected view"})
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 @permission_classes([HasAPIKey]) 
-def deva_chat(request):
-    user_input = request.data.get("message", "").strip()  
+def deva_chat(request, query=None):
+    user_input = request.data.get("message", "").strip() if request.method == 'POST' else query
     
     if not user_input:
         return Response({"error": "Message cannot be empty"}, status=400)
