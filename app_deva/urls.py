@@ -3,5 +3,5 @@ from .views import protected_view, deva_chat
 
 urlpatterns = [
     path('protected/', protected_view, name='protected_view'),
-    path('deva_chat/', deva_chat, name='deva_chat'),
+    path('', deva_chat, name='deva_chat'),
 ]
